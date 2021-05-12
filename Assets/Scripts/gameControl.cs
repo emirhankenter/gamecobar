@@ -221,6 +221,7 @@ public class gameControl : MonoBehaviour
     }
     public Color getColorFromString(string hex)
     {
+        if (string.IsNullOrEmpty(hex)) return bodyRend[1].color;
         float red = hexToNormalized(hex.Substring(0,2));
         float green = hexToNormalized(hex.Substring(2,2));
         float blue = hexToNormalized(hex.Substring(4,2));
